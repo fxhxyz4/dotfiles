@@ -1,0 +1,4 @@
+flstudio --channel=latest/candidate
+lxd               
+multipass         
+terminal-2048     
