@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo ip link delete wg0-temp
+
 sudo wg-quick down /tmp/wg0-temp.conf                                                                                                                                                                                                                          ─╯
 sudo rm /tmp/wg0-temp.conf
 
