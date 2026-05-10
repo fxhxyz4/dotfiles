@@ -1,0 +1,24 @@
+configuration {
+    modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "APPS";
+    icon-theme: "White-Sur dark";
+    display-run:                "RUN";
+    display-filebrowser:        "FILES";
+    display-window:             "WINDOW";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    icon-theme:                 "Infinity-dark";
+}
+
+element-icon {
+    size: 10px;
+    cursor: inherit;
+}
+
+element-text {
+    vertical-align: 0.5;
+    cursor: inherit;
+}
+
+@theme "~/.config/rofi/themes/theme.rasi"
