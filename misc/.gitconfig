@@ -1,0 +1,11 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = fxhxyz
+	email = fxhsec@proton.me
+[init]
+	defaultBranch = main
+	defaultObjectFormat = sha1
