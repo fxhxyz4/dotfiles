@@ -13,22 +13,21 @@
 |:-:|
 | ![terminal](./assets/terminal.png)
 
-| Code | Code with Shader |
+| Code | Spotify |
 |:-:|:-:|
-| ![code](assets/code.png) | ![code](assets/code-shaders.png)
+| ![code](assets/code.png) | ![spotify](assets/spotify.png)
 
 | |
 |:-:|
 ![terminal](assets/terminal-shaders.png)
 
-| Spotify | Spotify with Shader |
+| Code with Shader | Spotify with Shader |
 |:-:|:-:|
-| ![spotify](assets/spotify.png) | ![spotify](assets/spotify-shaders.png)
+| ![code](assets/code-shaders.png) | ![spotify](assets/spotify-shaders.png)
 
 ---
 <div align="center"> 
   <p>【 🇬🇧 Eng 】 <a href="./readme.ua.md">【 🇺🇦 Укр 】</a></p>
-  <img alt="Last README modification" src="https://img.shields.io/github/last-commit/fxhxyz4/dotfiles?path=readme.md&style=for-the-badge&logo=readdotcv&logoColor=ffff&label=Last%20README%20modification&labelColor=0D1117&color=0D1117">
 </div>
    
 
