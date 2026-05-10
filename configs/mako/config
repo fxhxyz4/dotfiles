@@ -1,0 +1,7 @@
+anchor=top-left
+margin=10
+
+default-timeout=1000
+
+[app-name="HyDE Notify"]
+invisible=1
