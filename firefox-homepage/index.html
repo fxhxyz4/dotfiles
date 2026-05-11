@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>⚡︎⚡︎</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --card-bg: rgba(20, 22, 28, 0.7);
+            --accent: #8fb1e6;
+            --text: #e0e0e0;
+        }
+
+        html {
+            user-select: none;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg);
+            font-family: 'JetBrains Mono', monospace;
+            margin: 0;
+            color: var(--text);
+        }
+
+        .glass-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            width: 90%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: var(--accent);
+            letter-spacing: 12px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .time {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .search-container { margin-bottom: 2.5rem; }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            font-size: 1.1rem;
+            outline: none;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(143, 177, 230, 0.2);
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: var(--text);
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.8rem;
+            border: 1px solid transparent;
+        }
+
+        .links a i { font-size: 1.1rem; color: var(--accent); }
+
+        .links a:hover {
+            background: rgba(143, 177, 230, 0.1);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-container">
+        <h1>FXHXYZ</h1>
+        <div class="time" id="clock">00:00:00</div>
+
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" name="q" placeholder="Type to search..." autofocus autocomplete="off">
+            </form>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com"><i class="fab fa-github"></i> GITHUB</a>
+            <a href="https://youtube.com"><i class="fab fa-youtube"></i> YOUTUBE</a>
+            <a href="https://soundcloud.com"><i class="fab fa-soundcloud"></i> SOUND</a>
+            <a href="https://web.telegram.org"><i class="fab fa-telegram"></i> TELEGRAM</a>
+            <a href="https://gitlab.com"><i class="fab fa-gitlab"></i> GITLAB</a>
+            <a href="https://gmail.com"><i class="fas fa-envelope"></i> GMAIL</a>
+            <a href="https://notion.so"><i class="fas fa-book"></i> NOTION</a>
+            <a href="https://chat.openai.com"><i class="fas fa-robot"></i> AI</a>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-GB', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
