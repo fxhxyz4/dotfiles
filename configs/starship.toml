@@ -1,0 +1,79 @@
+format = """
+[╭─](fg:#1a2a35)$os$username$directory$git_branch$git_status$cmd_duration
+[╰─](fg:#1a2a35)$character
+"""
+
+right_format = """
+$time
+"""
+
+# OS
+[os]
+style = "fg:#1ce8b5"
+disabled = false
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Arch = ""
+Linux = ""
+
+# USER
+[username]
+show_always = true
+style_user = "fg:#5a8a85"
+style_root = "fg:#f7768e"
+format = "[ $user ]($style_user)"
+
+# DIRECTORY
+[directory]
+style = "fg:#7ee8d8"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = false
+
+# GIT
+[git_branch]
+symbol = " "
+style = "fg:#1ce8b5"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:#e0af68"
+format = "[ $all_status$ahead_behind ]($style)"
+
+# COMMAND TIME
+[cmd_duration]
+min_time = 500
+style = "fg:#2a4a45"
+format = "[  $duration ]($style)"
+
+# PROMPT SYMBOL
+[character]
+success_symbol = "[➜](bold fg:#1ce8b5)"
+error_symbol = "[➜](bold fg:#f7768e)"
+
+# TIME (right prompt)
+[time]
+disabled = false
+format = "[  $time ](fg:#5a8a85)"
+time_format = "%H:%M"
+
+# Languages
+[python]
+symbol = " "
+style = "fg:#5a8a85"
+
+[rust]
+symbol = " "
+style = "fg:#5a8a85"
+
+[nodejs]
+symbol = " "
+style = "fg:#5a8a85"
+
+[git_commit]
+style = "fg:#1ce8b5"
+
+[package]
+symbol = "󰏗 "
+style = "fg:#5a8a85"
