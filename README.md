@@ -7,7 +7,7 @@
   [![Wayland](https://img.shields.io/badge/Wayland-FFB86C?style=for-the-badge&logo=wayland&logoColor=black)](https://wayland.freedesktop.org)
   [![License](https://img.shields.io/badge/License-MIT-BD93F9?style=for-the-badge)](./LICENSE.md)
 
-  <p>【 🇬🇧 Eng 】 <a href="./readme-ua.md">【 🇺🇦 Укр 】</a></p>
+  <p>【 🇬🇧 Eng 】 <a href="./README-ua.md">【 🇺🇦 Укр 】</a></p>
 
 [![Last README modification](https://img.shields.io/github/last-commit/fxhxyz4/dotfiles?path=README.md&style=for-the-badge&logo=readdotcv&logoColor=ffff&label=Last%20README%20modification&labelColor=0D1117&color=0D1117)](https://github.com/fxhxyz4/dotfiles/commits/main/README.md)
 
