@@ -58,12 +58,18 @@
  
 ## 1. Install packages
  
-Clone the repository and run the package installation script. It will automatically set up Chaotic-AUR, install yay, and install all packages from the four lists (pacman, AUR, Flatpak, Snap).
+Clone the repository and run the package installation script. It will automatically set up Chaotic-AUR, install yay, and install all packages from the four lists (pacman, AUR, Flatpak, Snap) and install nodejs for [neofetch-server](./neofetch-server).
  
 ```bash
 git clone https://github.com/fxhxyz4/dotfiles.git ~/dotfiles
 cd ~/dotfiles/packages
 bash install-packages.sh
+```
+
+```bash
+sudo pacman -S nodejs npm
+node -v
+npm -v
 ```
  
 The script installs packages in order:
