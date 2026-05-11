@@ -57,13 +57,20 @@
  
 ## 1. Встановлення пакетів
  
-Клонуй репозиторій і запусти скрипт встановлення пакетів. Він автоматично налаштує Chaotic-AUR, встановить yay та всі пакети з чотирьох списків (pacman, AUR, Flatpak, Snap).
+Клонуй репозиторій і запусти скрипт встановлення пакетів. Він автоматично налаштує Chaotic-AUR, встановить yay та всі пакети з чотирьох списків (pacman, AUR, Flatpak, Snap) та встановлення nodejs & npm для [neofetch-server](./neofetch-server).
  
 ```bash
 git clone https://github.com/fxhxyz4/dotfiles.git ~/dotfiles
 cd ~/dotfiles/packages
 bash install-packages.sh
 ```
+
+```bash
+sudo pacman -S nodejs npm
+node -v
+npm -v
+```
+
  
 Скрипт встановлює пакети в такому порядку:
 - Додає репозиторій **Chaotic-AUR**
