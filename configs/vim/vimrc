@@ -1,0 +1,101 @@
+let s:VIM_DIR = fnamemodify($MYVIMRC, ':h')
+execute 'source ' . s:VIM_DIR . '/hyde.vim'
+
+" ── General ──────────────────────────────────────────────────
+set nocompatible              " modern vim
+set encoding=utf-8
+set history=500
+set undolevels=500
+set updatetime=300
+
+" ── UI ───────────────────────────────────────────────────────
+set number                    " line numbers
+set relativenumber            " relative line numbers
+set cursorline                " highlight current line
+set scrolloff=8               " keep 8 lines above/below cursor
+set sidescrolloff=8
+set signcolumn=yes            " always show sign column
+set showmatch                 " highlight matching brackets
+set wildmenu                  " command completion
+set laststatus=2              " always show statusline
+set noshowmode                " hide -- INSERT -- (shown in statusline)
+set showcmd
+
+" ── Search ───────────────────────────────────────────────────
+set hlsearch                  " highlight search results
+set incsearch                 " incremental search
+set ignorecase                " case insensitive...
+set smartcase                 " ...unless uppercase used
+
+" ── Indentation ──────────────────────────────────────────────
+set tabstop=4
+set shiftwidth=4
+set expandtab                 " spaces instead of tabs
+set smartindent
+set autoindent
+
+" ── Files ────────────────────────────────────────────────────
+set autoread                  " reload files changed outside vim
+set nobackup
+set noswapfile
+set undofile                  " persistent undo
+set undodir=~/.vim/undodir
+
+" ── Splits ───────────────────────────────────────────────────
+set splitbelow                " horizontal split goes below
+set splitright                " vertical split goes right
+
+" ── Keymaps ──────────────────────────────────────────────────
+let mapleader = " "
+
+" Save / Quit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :wq<CR>
+
+" Clear search highlight
+nnoremap <leader>h :nohlsearch<CR>
+
+" Move between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Better indenting in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Move lines up/down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Quick buffer navigation
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bp :bprevious<CR>
+nnoremap <leader>bd :bdelete<CR>
+
+" ── Statusline ───────────────────────────────────────────────
+set statusline=
+set statusline+=\ %f         " filename
+set statusline+=\ %m         " modified flag
+set statusline+=%=           " right side
+set statusline+=\ %y         " filetype
+set statusline+=\ %l:%c      " line:col
+set statusline+=\ %p%%\      " percentage
+
+" ── Autocommands ─────────────────────────────────────────────
+augroup general
+    autocmd!
+    " Remove trailing whitespace on save
+    autocmd BufWritePre * :%s/\s\+$//e
+    " Return to last cursor position
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+augroup END
+
+" ── Create undodir if not exists ─────────────────────────────
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "p")
+endif
