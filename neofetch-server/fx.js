@@ -95,7 +95,7 @@ const getIpAddress = () => {
   return 'N/A';
 }
 
-app.listen(port, async () => {
+app.listen(port, '127.0.0.1', async () => {
   const url = `${local}:${port}`;
   console.log(`Server is running on http://localhost:${port}`);
   await open(url, { app: ['google chrome', '--incognito'] });
